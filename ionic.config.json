@@ -1,0 +1,7 @@
+{
+  "name": "MidtermExam",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
