@@ -1,0 +1,33 @@
+.Size {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: auto;
+    
+    
+}
+.container{
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    .container1{
+        padding: 1rem;
+        border: solid black;
+    }
+    .info{
+        padding-top: 2rem;
+    }
+    .enroll{
+        padding-top: 5rem;
+    }
+    .SETTINGS{
+        padding-top: 15rem;
+    }
+}
+.Logo{
+    justify-content:center;
+}
+
+.info h3{
+    font-size: 1rem;
+}

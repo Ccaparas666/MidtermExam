@@ -1,0 +1,77 @@
+.Size {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: auto;
+    
+    
+}
+.container{
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+    .container1{
+        padding: 1rem;
+        border: solid black;
+    }
+    .info{
+        padding-top: 3rem;
+    }
+    .SETTINGS{
+        padding-top: 7rem;
+    }
+    .input{
+        padding-top: 2rem;
+    }
+}
+.Logo{
+    justify-content:center;
+}
+
+.info h3{
+    font-size: 1rem;
+}
+.input{
+    
+    ion-input{
+       
+        border: 2px solid gray;
+        border-radius: 2rem;  
+        }
+    ion-label{
+        text-align: left;
+        display: inline;
+        width: 7rem;      
+    }
+    ion-select{
+        border: 2px solid gray;
+        border-radius: 2rem;
+    }
+    ion-checkbox{
+        background: green;
+        border-color: transparent;
+    }   
+    .center{
+        text-align: center;
+    } 
+}
+ion-col {
+    border: solid 1px #fff;
+    text-align: left;
+    padding: 0 1rem;
+    display: flex; 
+    align-items: center;
+    justify-content: left;
+   
+  }
+
+ion-col.unit{
+    text-align: center;
+}
+
+ion-col.Subject{
+    text-align: left;
+}
+
+
+

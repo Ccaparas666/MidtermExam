@@ -11,6 +11,34 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'index-page',
+    loadChildren: () => import('./index-page/index-page.module').then( m => m.IndexPagePageModule)
+  },
+  {
+    path: 'settings-page',
+    loadChildren: () => import('./settings-page/settings-page.module').then( m => m.SettingsPagePageModule)
+  },
+  {
+    path: 'studentstatus-page',
+    loadChildren: () => import('./studentstatus-page/studentstatus-page.module').then( m => m.StudentstatusPagePageModule)
+  },
+  {
+    path: 'newandtransferstudentsenrollment-page',
+    loadChildren: () => import('./newandtransferstudentsenrollment-page/newandtransferstudentsenrollment-page.module').then( m => m.NewandtransferstudentsenrollmentPagePageModule)
+  },
+  {
+    path: 'oldstudentenrollment-page',
+    loadChildren: () => import('./oldstudentenrollment-page/oldstudentenrollment-page.module').then( m => m.OldstudentenrollmentPagePageModule)
+  },
+  {
+    path: 'enrollmentconfirmation-page',
+    loadChildren: () => import('./enrollmentconfirmation-page/enrollmentconfirmation-page.module').then( m => m.EnrollmentconfirmationPagePageModule)
+  },
+  {
+    path: 'enrollmentsucessfulinformation-page',
+    loadChildren: () => import('./enrollmentsucessfulinformation-page/enrollmentsucessfulinformation-page.module').then( m => m.EnrollmentsucessfulinformationPagePageModule)
+  },
 ];
 
 @NgModule({
