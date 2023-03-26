@@ -6,7 +6,7 @@
 
 <ion-content>
   <div class="container">
-    <div class="container1">  
+    <div class="container1">
       <div class="Logo">
         <ion-img class="Size" src="https://enroll.lccdo.edu.ph/assets/img/lclogo.png"></ion-img>
       </div>
@@ -14,45 +14,49 @@
         <h1>LOURDES COLLEGE</h1>
         <h3>CAGAYAN DE ORO CITY</h3>
       </div>
+      <!-- ///////////////////////////////////////////////// -->
       <div class="input">
         <ion-item>
           <ion-label>ID Number</ion-label>
           <ion-input></ion-input>
         </ion-item>
-      </div> 
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
       <div class="input">
         <ion-item>
           <ion-label class="center">STUDENT INFORMATION</ion-label>
         </ion-item>
         <ion-item>
           <ion-label>Last name:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="Lastname"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>First name:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="Firstname"></ion-input>
+
         </ion-item>
         <ion-item>
           <ion-label>Middle name:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="Middlename"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Address:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="Address"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Contact #:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="Coctact"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Blood type:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="BloodT"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Birthdate:</ion-label>
-          <ion-input></ion-input>
+          <ion-input id="Birthdate"></ion-input>
         </ion-item>
       </div>
+      <!-- ///////////////////////////////////////////////// -->
       <div class="input">
         <ion-item>
           <ion-label class="center">COURSE AND SUBJECTS</ion-label>
@@ -60,87 +64,202 @@
         <ion-list>
           <ion-item>
             <ion-label>COURSE:</ion-label>
-            <ion-select interface="action-sheet" slot="end" placeholder="SELECT COURSE">
-              <ion-select-option>BSIT</ion-select-option>
-              <ion-select-option>BUSINESS</ion-select-option>
-              <ion-select-option>ACCOUNTING</ion-select-option>
+              <ion-select interface="action-sheet" slot="end" placeholder="SELECT COURSE" [(ngModel)]="selectedOption2">
+              <ion-select-option value="BSIT" id="BSIT">BSIT</ion-select-option>
+              <ion-select-option value="BUSINESS" id="BUSINESS">BUSINESS</ion-select-option>
+              <ion-select-option value="ACCOUNTING" id="ACCOUNTING">ACCOUNTING</ion-select-option>
             </ion-select>
           </ion-item>
-        <ion-item>
-          <ion-grid>
+        </ion-list>
+
+        <ion-list *ngIf="selectedOption2 === 'BSIT' ">
+          <ion-item>
+            <ion-grid>
               <ion-row>
                 <ion-col size="auto" style="border: 0px">Subject</ion-col>
                 <ion-col style="border: 0px"></ion-col>
                 <ion-col class="unit" size="1" style="border: 0px">Unit</ion-col>
               </ion-row>
-              <ion-row>             
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col style="border-left: 0px">Subject #1</ion-col>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox1"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Web Development</ion-col>
                 <ion-col class="unit" size="1">5</ion-col>
               </ion-row>
               <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col style="border-left: 0px">Subject #1</ion-col>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox2"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">System Integration</ion-col>
                 <ion-col class="unit" size="1">5</ion-col>
               </ion-row>
               <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col style="border-left: 0px">Subject #1</ion-col>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox3"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Advanced Database System</ion-col>
                 <ion-col class="unit" size="1">5</ion-col>
               </ion-row>
               <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col style="border-left: 0px">Subject #1</ion-col>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox4"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Networking 2</ion-col>
                 <ion-col class="unit" size="1">5</ion-col>
               </ion-row>
               <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col style="border-left: 0px">Subject #1</ion-col>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Quantitative Methods</ion-col>
                 <ion-col class="unit" size="1">5</ion-col>
-              </ion-row>           
-          </ion-grid>
-        </ion-item>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Foreign Language</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Living in the IT Era</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
         </ion-list>
+
+        <ion-list *ngIf="selectedOption2 === 'BUSINESS' ">
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="auto" style="border: 0px">Subject</ion-col>
+                <ion-col style="border: 0px"></ion-col>
+                <ion-col class="unit" size="1" style="border: 0px">Unit</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox1"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Business Law</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox2"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">International Business</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox3"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Product Management</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox4"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Marketing Research</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Retail Management</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Operations Management</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Cooperative Management</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngIf="selectedOption2 === 'ACCOUNTING' ">
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="auto" style="border: 0px">Subject</ion-col>
+                <ion-col style="border: 0px"></ion-col>
+                <ion-col class="unit" size="1" style="border: 0px">Unit</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox1"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">The Entrepreneurial Mind</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox2"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Ethics</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox3"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Financial Management</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox4"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Financial Markets</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Income Taxation</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Intermediate Accounting 2</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="checkbox5"></ion-checkbox></ion-col>
+                <ion-col style="border-left: 0px">Cost Accounting and Control</ion-col>
+                <ion-col class="unit" size="1">5</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+        
       </div>
+      <!-- ///////////////////////////////////////////////// -->
       <div class="input">
         <ion-item>
           <ion-col style="border: 1px" size="11">TOTAL UNITS FOR THIS SEMESTER:</ion-col>
           <ion-col style="border: 1px" size="1">20</ion-col>
         </ion-item>
       </div>
+      <!-- ///////////////////////////////////////////////// -->
       <div class="input">
         <ion-label class="ion-text-center">REQUIREMENTS</ion-label>
         <ion-item>
-          <ion-grid>             
-              <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col size="11" style="border-left: 0px">TOR</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col size="11" style="border-left: 0px">DEPLOMA</ion-col>
-              </ion-row> 
-              <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col size="11" style="border-left: 0px">FORM 137</ion-col>
-              </ion-row> 
-              <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col size="11" style="border-left: 0px">2X2 PICTURE</ion-col>
-              </ion-row>            
+          <ion-grid>
+            <ion-row>
+              <ion-col size="1" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="option1"></ion-checkbox></ion-col>
+              <ion-col size="11" style="border-left: 0px">TOR</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="option2"></ion-checkbox></ion-col>
+              <ion-col size="11" style="border-left: 0px">DEPLOMA</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="option3"></ion-checkbox></ion-col>
+              <ion-col size="11" style="border-left: 0px">FORM 137</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="1" style="border-right: 0px"><ion-checkbox color="success" [(ngModel)]="option4"></ion-checkbox></ion-col>
+              <ion-col size="11" style="border-left: 0px">2X2 PICTURE</ion-col>
+            </ion-row>
           </ion-grid>
-        </ion-item>              
+        </ion-item>
       </div>
+      <!-- ///////////////////////////////////////////////// -->
       <div class="input">
         <ion-item>
-          <ion-grid>             
-              <ion-row>
-                <ion-col size="auto" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
-                <ion-col size="11" style="border-left: 0px">I accept the Terms of Use and Privacy Policy</ion-col>
-              </ion-row>           
+          <ion-grid>
+            <ion-row>
+              <ion-col size="1" style="border-right: 0px"><ion-checkbox color="success"></ion-checkbox></ion-col>
+              <ion-col size="11" style="border-left: 0px">I accept the Terms of Use and Privacy Policy</ion-col>
+            </ion-row>
           </ion-grid>
-        </ion-item>              
-      </div>       
+        </ion-item>
+      </div>
+      <!-- ///////////////////////////////////////////////// -->
+      <div class="enroll">
+        <ion-button (click)="checkInput()">PROCEED</ion-button>
+      </div>
       <div class="SETTINGS">
         <ion-button fill="clear">SETTINGS</ion-button>
       </div>

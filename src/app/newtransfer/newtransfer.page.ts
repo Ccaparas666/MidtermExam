@@ -1,26 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { AlertController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 @Component({
-  selector: 'app-newandtransferstudentsenrollment-page',
-  templateUrl: './newandtransferstudentsenrollment-page.page.html',
-  styleUrls: ['./newandtransferstudentsenrollment-page.page.scss'],
+  selector: 'app-newtransfer',
+  templateUrl: './newtransfer.page.html',
+  styleUrls: ['./newtransfer.page.scss'],
 })
-export class NewandtransferstudentsenrollmentPagePage implements OnInit {
-  //INPUT PERSONAL INFORMATION
-  //Checkbox
-  option1: boolean = false;
-  option2: boolean = false;
-  option3: boolean = false;
-  option4: boolean = false;
-  checkbox1: boolean = false;
-  checkbox2: boolean = false;
-  checkbox3: boolean = false;
-  checkbox4: boolean = false;
-  checkbox5: boolean = false;
-  selectedOption: string = '';
-  selectedOption2: string = '';
-
+export class NewtransferPage implements OnInit {
 
   constructor(private navCtrl: NavController, private alertController: AlertController) { }
   checkInput(){
@@ -56,22 +41,10 @@ export class NewandtransferstudentsenrollmentPagePage implements OnInit {
     const userinput7 = (document.getElementById('Birthdate')as HTMLInputElement).value;
     const value7 = String(userinput7);
 
-    let selectedOptions = {
-      option1: this.option1,
-      option2: this.option2,
-      option3: this.option3,
-      option4: this.option4,
-      checkbox1: this.checkbox1,
-      checkbox2: this.checkbox2,
-      checkbox3: this.checkbox3,
-      checkbox4: this.checkbox4,
-      checkbox5: this.checkbox5,
-    };
+    // this.navCtrl.navigateForward(['/enrollmentconfirmation-page',{userinput1, userinput2, userinput3, userinput4, userinput5, userinput6, userinput7 }]);
 
     const navigationExtras = {
       queryParams: {
-        selectedOptions: JSON.stringify(selectedOptions),
-        selectedOption2: this.selectedOption2,
         value1: value1,
         value2: value2,
         value3: value3,
@@ -82,9 +55,9 @@ export class NewandtransferstudentsenrollmentPagePage implements OnInit {
       },
     };
     this.navCtrl.navigateForward(['/enrollmentconfirmation-page'], navigationExtras);
-    
   }
+
   ngOnInit() {
-    
   }
+
 }
