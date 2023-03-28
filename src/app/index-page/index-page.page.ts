@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NavController} from '@ionic/angular';
 @Component({
   selector: 'app-index-page',
   templateUrl: './index-page.page.html',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexPagePage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
+  
+  goToSettings(){
+    this.navCtrl.navigateForward('settings-page');
+  }
 
+  goToStatuspage(){
+    this.navCtrl.navigateForward('studentstatus-page');
+  }
   ngOnInit() {
   }
 

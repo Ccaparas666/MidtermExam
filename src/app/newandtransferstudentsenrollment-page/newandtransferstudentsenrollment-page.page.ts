@@ -18,8 +18,20 @@ export class NewandtransferstudentsenrollmentPagePage implements OnInit {
   checkbox3: boolean = false;
   checkbox4: boolean = false;
   checkbox5: boolean = false;
+  checkbox6: boolean = false;
+  checkbox7: boolean = false;
   selectedOption: string = '';
   selectedOption2: string = '';
+
+
+  isChecked1: boolean = false;
+  isChecked2: boolean = false;
+  isChecked3: boolean = false;
+  isChecked4: boolean = false;
+  isChecked5: boolean = false;
+  isChecked6: boolean = false;
+
+  
 
 
   constructor(private navCtrl: NavController, private alertController: AlertController) { }
@@ -40,7 +52,10 @@ export class NewandtransferstudentsenrollmentPagePage implements OnInit {
       this.GotoOutputPage();
     }
   }
+
   GotoOutputPage(){
+    
+
     const userinput1 = (document.getElementById('Firstname')as HTMLInputElement).value;
     const value1 = String(userinput1);
     const userinput2 = (document.getElementById('Lastname')as HTMLInputElement).value;
@@ -66,6 +81,8 @@ export class NewandtransferstudentsenrollmentPagePage implements OnInit {
       checkbox3: this.checkbox3,
       checkbox4: this.checkbox4,
       checkbox5: this.checkbox5,
+      checkbox6: this.checkbox6,
+      checkbox7: this.checkbox7,
     };
 
     const navigationExtras = {

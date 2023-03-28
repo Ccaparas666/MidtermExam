@@ -15,26 +15,26 @@
         <h3>CAGAYAN DE ORO CITY</h3>
       </div>
       <div class="Rbutton">
-        <ion-radio-group>
+        <ion-radio-group id="test">
           <ion-item>
             <ion-label>NEW STUDENT</ion-label>
-            <ion-radio slot="start"></ion-radio>
+            <ion-radio  value ="1"slot="start"></ion-radio>
           </ion-item>
           <ion-item>
             <ion-label>OLD STUDENT</ion-label>
-            <ion-radio slot="start"></ion-radio>
+            <ion-radio value ="2" slot="start"></ion-radio>
           </ion-item>
           <ion-item>
             <ion-label>TRANSFEREE</ion-label>
-            <ion-radio slot="start"></ion-radio>
+            <ion-radio value ="3" slot="start"></ion-radio>
           </ion-item>
         </ion-radio-group>
       </div>
       <div class="enroll">
-        <ion-button>PROCEED</ion-button>
+        <ion-button (click)="goToEnrollment()" >PROCEED</ion-button>
       </div>
       <div class="SETTINGS">
-        <ion-button fill="clear">SETTINGS</ion-button>
+        <ion-button (click)="goToSettings()" fill="clear">SETTINGS</ion-button>
       </div>
     </div>
   </div>
